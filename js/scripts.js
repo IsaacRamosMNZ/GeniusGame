@@ -147,7 +147,7 @@ const playSequence = () => {
 			disablePads();
 			changePadCursor("pointer");
 			waitForPlayerClick();
-			_data.playerCanPlay = true;
+			_data.playerCanPlay = false;
 			return;
 		}
 		const sndId = _data.gameSequence[counter];
