@@ -32,8 +32,8 @@ _soundUrls.forEach(sndPath => {
 });
 
 _gui.switch.addEventListener("click", () => {
-data.gameOn =_gui.switch.classList.toggle("gui_btn-switch--on");
-gui.counter.classList.toggle("gui_counter--on");
+_data.gameOn =_gui.switch.classList.toggle("gui__btn-switch--on");
+_gui.counter.classList.toggle("gui__counter--on");
 _gui.counter.innerHTML ="--";
 
 _data.strict = false;
@@ -45,20 +45,22 @@ _data.playerSequence = [];
 disablePads();
 changePadCursor("auto");
 
-gui.led.classList.remove("gui_led--active")
+_gui.led.classList.remove("gui__led--active")
 });
 
 _gui.strict.addEventListener("click", () => {
 	if(!_data.gameOn)
 		return;
 
-data.strict = _gui.led.classList.toggle("gui_led--active");
+_data.strict = _gui.led.classList.toggle("gui__led--active");
 
 
 });
 
 _gui.start.addEventListener("click", () => {
 	startGame();
+	waitForPlayerClick();
+	playerCanPlay();
 
 });
 
@@ -143,8 +145,8 @@ const playSequence = () => {
 		if(counter === _data.gameSequence.length){
 			clearInterval(interval);
 			disablePads();
-			waitForPlayerClick();
 			changePadCursor("pointer");
+			waitForPlayerClick();
 			_data.playerCanPlay = true;
 			return;
 		}
@@ -161,7 +163,7 @@ const playSequence = () => {
 	  }
 	  padOn = !padOn;
 
- }, 750);
+ }, 800);
 }
 
 const blink = (text, callback) => {
@@ -173,14 +175,14 @@ const blink = (text, callback) => {
   const interval = setInterval(() => {
 	if(!_data.gameOn){
 		clearInterval(interval);
-		gui.counter.classList.remove("gui_counter--on")
+		_gui.counter.classList.remove("gui__counter--on")
 		return;
 	}
      if (on) {
-		gui.counter.classList.remove("gui_counter--on");
+		_gui.counter.classList.remove("gui__counter--on");
 	 }
 	 else {
-		gui.counter.classList.add("gui_counter--on");
+		_gui.counter.classList.add("gui__counter--on");
 	
 		if(++counter === 3 ){
 			clearInterval(interval);
