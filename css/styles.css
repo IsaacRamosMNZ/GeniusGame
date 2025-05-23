@@ -69,9 +69,11 @@ html{
 }
 
 body {
-	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+	background-image: url('Madeira.avif');
     font-family: "Bungee", verdana, sans-serif;
+	background-size: 100rem;
 }
+
 
 
 /**********************************/
