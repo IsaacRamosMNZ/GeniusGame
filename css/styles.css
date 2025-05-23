@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-/**********************************/
+/************/
 /* 0. Variáveis
 /* 1. Tags
 /* 2. Body
@@ -13,9 +13,9 @@
 /*   3.2 Center
 /*      3.2.1 GUI
 /* 4. Footer
-/**********************************/
+/************/
 
-/**********************************/
+/************/
 /* Color Guide:
 /* 
 /* #00A74A : normal-green
@@ -30,11 +30,11 @@
 /* #ECE7EE : center
 /* #32050C : counter-color
 /*
-/**********************************/
+/************/
 
-/**********************************/
+/************/
 /* 0. Variáveis
-/**********************************/
+/************/
 
 :root {
 	--clr-normal-green:   #00A74A;
@@ -60,9 +60,9 @@
 	--game-border: 1.5rem solid var(--clr-border);
 }
 
-/**********************************/
+/************/
 /* 1. Tags
-/**********************************/
+/************/
 
 html{
 	font-size: 62.5%;
@@ -76,9 +76,9 @@ body {
 
 
 
-/**********************************/
+/************/
 /* 2. Body
-/**********************************/
+/************/
 .container{
 width: var(--game-size);
 margin-left: auto;
@@ -87,9 +87,9 @@ margin-right: auto;
 
 }
 
-/**********************************/
+/************/
 /* 3. Game
-/**********************************/
+/************/
 .game{
 	width: var(--game-size);
 	height: var(--game-size);
@@ -115,9 +115,9 @@ vertical-align: top;
 
 }
 
-/**********************************/
+/************/
 /* 3.1 Pads
-/**********************************/
+/************/
 .game__pad{
 width: calc(var(--game-size) / 2);
 height: calc(var(--game-size) / 2);
@@ -141,25 +141,25 @@ border: var(--game-border)
 	border-bottom-right-radius: 100%;
 }
 
-.game__pad--tl.game__pad--active{
+.game_pad--tl.game_pad--active{
 	background-color: var(--clr-light-green);
 }
-.game__pad--tr.game__pad--active{
+.game_pad--tr.game_pad--active{
 	background-color: var(--clr-light-red);
 }
-.game__pad--bl.game__pad--active{
+.game_pad--bl.game_pad--active{
 	background-color: var(--clr-light-yellow);
 }
-.game__pad--br.game__pad--active{
+.game_pad--br.game_pad--active{
 	background-color: var(--clr-light-blue);
 }
 
 .game__pad--btn{
 	cursor: pointer;
 }
-/**********************************/
+/************/
 /* 3.2 Center
-/**********************************/
+/************/
 .game__options {
 	position: absolute;
 	background-color: var(--clr-center);
@@ -177,9 +177,9 @@ border: var(--game-border)
 
 }
 
-/**********************************/
+/************/
 /* 3.2.1 GUI
-/**********************************/
+/************/
 
 
 .gui{
@@ -293,9 +293,9 @@ box-shadow: none;
 	background-color: red;
 
 }
-/**********************************/
+/************/
 /* 4. Footer
-/**********************************/
+/************/
 
 footer{
 	text-align: center;
@@ -303,3 +303,7 @@ footer{
 	font-size: 2rem;
 
 }
+@media (max-width: 480px) {
+  :root {
+    --game-size: 24rem;
+  }
