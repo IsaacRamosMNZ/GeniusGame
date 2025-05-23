@@ -303,7 +303,3 @@ footer{
 	font-size: 2rem;
 
 }
-@media (max-width: 480px) {
-  :root {
-    --game-size: 24rem;
-  }
