@@ -60,7 +60,7 @@ _data.strict = _gui.led.classList.toggle("gui__led--active");
 _gui.start.addEventListener("click", () => {
 	startGame();
 	waitForPlayerClick();
-	
+	playerCanPlay();
 
 });
 
