@@ -69,8 +69,9 @@ html{
 }
 
 body {
-	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+	background-image: url('Madeira.avif');
     font-family: "Bungee", verdana, sans-serif;
+	background-size: 100rem;
 }
 
 
@@ -98,7 +99,8 @@ margin-right: auto;
 }
 
 .game__title{
-	font-size: 4rem;
+	text-align: center;
+	font-size: 3.5rem;
 	text-transform: uppercase;
 	margin: 0;
 	padding-left: 1.2rem;
@@ -256,7 +258,7 @@ box-shadow: none;
 
 
 .gui__btn-switch--on::before{
-	left: 0;
+	left: .2;
 }
 .gui__counter{
 	background-color: var(--clr-counter-bg);
@@ -298,6 +300,7 @@ box-shadow: none;
 footer{
 	text-align: center;
 	margin-top: 10rem;
-	font-size: 2rem;
+	font-size: 1.5rem;
 
 }
+
